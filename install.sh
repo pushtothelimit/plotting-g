@@ -16,7 +16,7 @@ fi
 echo "Downloading qwt-"$QWT_VERSION"..."
 mkdir /tmp/qwt/
 wget -P /tmp/qwt/ $QWT_DL_URL &>/dev/null
-
+t
 echo "Compiling and installing qwt-"$QWT_VERSION"..."
 tar -xvjf qwt-$QWT_VERSION .tar.bz2
 cp /tmp/qwt/qwt-$QWT_VERSION $QWT_PATH
