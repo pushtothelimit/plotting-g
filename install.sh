@@ -21,7 +21,7 @@ t
 echo "Compiling and installing qwt-"$QWT_VERSION"..."
 tar -xvjf qwt-$QWT_VERSION .tar.bz2
 cp /tmp/qwt/qwt-$QWT_VERSION $QWT_PATH
-rmdir /tmp/qwt/
+rm -rf /tmp/qwt/
 cd $QWT_PATH
 
 # now follow the qwt installation procedure
@@ -55,14 +55,14 @@ cd $PLOTTING_DIR
 $QMAKE_BIN plotting.pro
 make
 make clean
-rmdir obj moc
+rm -rf obj moc
 echo "Installation finished successful, exiting..."
 
 
 function aborting_process(){
 		make clean
-		rmdir /tmp/qwt/
-		rmdir $QWT_PATH
+		rm -rf /tmp/qwt/
+		rm -rf $QWT_PATH
 		cd $PLOTTING_DIR
 		exit 1;
 }
