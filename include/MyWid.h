@@ -1,37 +1,22 @@
 #ifndef MYWID_H
 #define MYWID_H
 
-#include<MyPlot.h>
-#include <qwidget.h>
-#include <qapplication.h>
-#include <QLineEdit>
-#include <QString>
-#include <QComboBox>
+#include <QWidget>
 
-class MyWid : public QWidget{
-	
-	Q_OBJECT
+namespace Ui {
+class MyWid;
+}
 
-	public:
-		MyPlot * plot1 ;
-		QLineEdit * txte01;
-		QLineEdit * txte02;
-		QLineEdit * txte1;
-		QLineEdit * txte2;
-		QComboBox *combo2;
-		QComboBox *combo01;
-		int gotnum;
-		int x,y,w,h;
-		
-		MyWid();
-		
-		
-	public slots:
-			
-		void update();
-		int updatefile();
-		void toprint();
+class MyWid : public QWidget
+{
+    Q_OBJECT
+
+public:
+    explicit MyWid(QWidget *parent = 0);
+    ~MyWid();
+
+private:
+    Ui::MyWid *ui;
 };
-
 
 #endif // MYWID_H
