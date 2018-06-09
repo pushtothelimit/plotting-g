@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MyWid</class>
+ <widget class="QWidget" name="MyWid">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MyWid</string>
+  </property>
+  <widget class="QWidget" name="verticalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>801</width>
+     <height>301</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="vBase">
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="srcPage">
+       <attribute name="title">
+        <string>Source</string>
+       </attribute>
+       <widget class="QWidget" name="horizontalLayoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>801</width>
+          <height>271</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="srcPageLayout">
+         <item>
+          <widget class="QGroupBox" name="readGroup">
+           <property name="title">
+            <string>Read a file</string>
+           </property>
+           <widget class="QWidget" name="verticalLayoutWidget_2">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>20</y>
+              <width>401</width>
+              <height>251</height>
+             </rect>
+            </property>
+            <layout class="QVBoxLayout" name="readLayout">
+             <item>
+              <widget class="QLabel" name="fileNameLbl">
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Insert File name </string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="fileNameTxt"/>
+             </item>
+             <item>
+              <widget class="QPushButton" name="updateBtn">
+               <property name="text">
+                <string>Update</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="errorLbl">
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="funcGroup">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+           <property name="title">
+            <string>Insert a function</string>
+           </property>
+           <widget class="QWidget" name="horizontalLayoutWidget_2">
+            <property name="geometry">
+             <rect>
+              <x>-1</x>
+              <y>19</y>
+              <width>401</width>
+              <height>171</height>
+             </rect>
+            </property>
+            <layout class="QHBoxLayout" name="funInsLayout" stretch="0">
+             <property name="spacing">
+              <number>50</number>
+             </property>
+             <property name="sizeConstraint">
+              <enum>QLayout::SetDefaultConstraint</enum>
+             </property>
+             <item>
+              <layout class="QVBoxLayout" name="funInsLayoutVert">
+               <property name="spacing">
+                <number>0</number>
+               </property>
+               <item>
+                <widget class="QLabel" name="funLbl">
+                 <property name="text">
+                  <string>Write a function</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="funTxt"/>
+               </item>
+               <item>
+                <widget class="QLabel" name="funMsgLbl">
+                 <property name="text">
+                  <string>... waiting for function...  Default is sin(x)</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="horizontalLayoutWidget_3">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>190</y>
+              <width>391</width>
+              <height>81</height>
+             </rect>
+            </property>
+            <layout class="QHBoxLayout" name="densityLayout" stretch="0,0,0">
+             <item>
+              <widget class="QLabel" name="densityLbl">
+               <property name="text">
+                <string>Set point density:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="densityTxt"/>
+             </item>
+             <item>
+              <widget class="QPushButton" name="densityBtn">
+               <property name="text">
+                <string>PushButton</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="plotPage">
+       <attribute name="title">
+        <string>Plot</string>
+       </attribute>
+       <widget class="QWidget" name="verticalLayoutWidget_4">
+        <property name="geometry">
+         <rect>
+          <x>-1</x>
+          <y>-1</y>
+          <width>801</width>
+          <height>442</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="plotPageLayout"/>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
