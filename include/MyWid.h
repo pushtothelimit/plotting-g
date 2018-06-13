@@ -2,7 +2,7 @@
 #define MYWID_H
 
 #include <QWidget>
-#include <QApplication>>
+#include <QApplication>
 #include <QLineEdit>
 #include <QString>
 #include <QComboBox>
@@ -21,22 +21,17 @@ public:
     explicit MyWid(QWidget *parent = 0);
     ~MyWid();
 
-   // MyPlot * plot1 ;
-//    QLineEdit * txte01;
-//    QLineEdit * txte02;
-//    QLineEdit * txte1;
-//    QLineEdit * txte2;
-//    QComboBox *combo2;
-//    QComboBox *combo01;
+      //MyPlot * plot1;
+    //MyPlot * plot1 = new MyPlot;
+    MyPlot * plot1;
     int gotnum;
     int x,y,w,h;
 
-public slots:
-
+//public slots:
+private slots:
     void on_densityBtn_pressed();
     int on_readFileBtn_pressed();
     void on_exportBtn_pressed();
-
 private:
     Ui::MyWid *ui;
 };

@@ -26,10 +26,12 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     src/main.cpp \
-    src/MyWid.cpp
+    src/MyWid.cpp \
+    src/MyPlot.cpp
 
 HEADERS += \
-    include/MyWid.h
+    include/MyWid.h \
+    include/MyPlot.h
 
 FORMS += \
     ui/MyWid.ui

@@ -1,10 +1,10 @@
-#include "MyWid.h"
+#include <MyWid.h>
 #include "ui_MyWid.h"
 
-#include <qwidget.h>
+#include <QWidget>
 #include <QStyle>
 #include <QBoxLayout>
-#include <qpushbutton.h>
+#include <QPushButton>
 #include <QLabel>
 #include <QGroupBox>
 #include <QVector>
@@ -20,30 +20,34 @@ MyWid::MyWid(QWidget *parent) :
     ui(new Ui::MyWid)
 {
     ui->setupUi(this);
+    plot1 = new MyPlot;
+    ui->plotLayout->addWidget(plot1);
+
 }
 
 MyWid::~MyWid()
 {
+    //delete plot1;
     delete ui;
 }
 
 
 void MyWid::on_densityBtn_pressed(){
 
-    /*
-            //*str=txte1->toPlainText();
+
             bool ok;
-            gotnum=(txte1->displayText()).toInt(&ok,10);
+            gotnum=(ui->densityTxt->displayText()).toInt(&ok,10);
+            //plot1->listcrea(gotnum);
             plot1->listcrea(gotnum);
-            //std::cout<<gotnum<<'\n';
-    */
+
+
         }
 
 int MyWid::on_readFileBtn_pressed(){
-    /*
+
     int outVal = 0;
     QString fileName;
-    fileName=txte02->displayText();
+    fileName = ui->fileNameTxt->displayText();
     QTextStream out(stdout);
     QFile file(fileName);
     QTextStream in(&file);
@@ -60,15 +64,15 @@ int MyWid::on_readFileBtn_pressed(){
         plot1->listcreafile(fileName);
     }
     return outVal;
-    */
+
 }
 
 void MyWid::on_exportBtn_pressed(){
-    /*
+
     QString * strName =new QString;
     QString *strExt = new QString;
-    *strExt=combo2->currentText();
-    *strName=txte2->displayText();
+    *strExt=ui->exportCmb->currentText();
+    *strName=ui->densityTxt->displayText();
     strName->append('.');
     strName->append(strExt);
     QwtPlotRenderer *printer=new QwtPlotRenderer;
@@ -76,5 +80,5 @@ void MyWid::on_exportBtn_pressed(){
     delete printer;
     delete strName;
     delete strExt;
-    */
+
     }

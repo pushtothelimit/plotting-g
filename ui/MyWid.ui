@@ -386,9 +386,6 @@
          <property name="rightMargin">
           <number>8</number>
          </property>
-         <item>
-          <widget class="QwtPlot" name="plot1"/>
-         </item>
         </layout>
        </widget>
       </widget>
@@ -398,13 +395,60 @@
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <customwidgets>
-  <customwidget>
-   <class>QwtPlot</class>
-   <extends>QFrame</extends>
-   <header>qwt_plot.h</header>
-  </customwidget>
- </customwidgets>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>exportBtn</sender>
+   <signal>pressed()</signal>
+   <receiver>MyWid</receiver>
+   <slot>on_exportBtn_pressed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>762</x>
+     <y>483</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>773</x>
+     <y>550</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>densityBtn</sender>
+   <signal>pressed()</signal>
+   <receiver>MyWid</receiver>
+   <slot>on_densityBtn_pressed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>727</x>
+     <y>472</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>255</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>readFileBtn</sender>
+   <signal>pressed()</signal>
+   <receiver>MyWid</receiver>
+   <slot>on_readFileBtn_pressed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>208</x>
+     <y>288</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>255</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>on_readFileBtn_pressed()</slot>
+  <slot>on_densityBtn_pressed()</slot>
+  <slot>on_exportBtn_pressed()</slot>
+ </slots>
 </ui>
